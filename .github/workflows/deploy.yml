@@ -14,18 +14,14 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Show Runner Information
+      - name: Deploy Website to Nginx
         run: |
-          echo "GitHub Actions is running on AWS EC2!"
-          echo "Runner deployment started successfully."
+          sudo cp index.html /var/www/html/index.html
+          sudo chown ubuntu:ubuntu /var/www/html/index.html
+          echo "Website deployed successfully!"
 
-      - name: Prepare Website
+      - name: Verify Deployment
         run: |
-          mkdir -p "$HOME/website"
-          cp index.html "$HOME/website/index.html"
-          echo "Website files copied successfully."
-
-      - name: Show Deployment Status
-        run: |
-          echo "Website deployment files are ready."
-          ls -l "$HOME/website"
+          test -f /var/www/html/index.html
+          echo "Website file exists on EC2."
+          ls -l /var/www/html/index.html
