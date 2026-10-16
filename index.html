@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CloudDeploy | DevOps Practical</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f6ff;
+      color: #172554;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #172554, #2563eb);
+      color: white;
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    header h2 {
+      font-size: 25px;
+    }
+
+    header span {
+      color: #bfdbfe;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 75px 20px;
+      background: white;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span {
+      color: #2563eb;
+    }
+
+    .hero p {
+      color: #64748b;
+      max-width: 600px;
+      margin: 0 auto 25px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #1d4ed8;
+    }
+
+    .section {
+      padding: 50px 8%;
+      text-align: center;
+    }
+
+    .section h2 {
+      margin-bottom: 25px;
+      font-size: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px 22px;
+      border-radius: 14px;
+      box-shadow: 0 5px 20px #17255412;
+      border: 1px solid #e2e8f0;
+    }
+
+    .card .icon {
+      font-size: 35px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #1d4ed8;
+    }
+
+    .card p {
+      color: #64748b;
+      font-size: 15px;
+    }
+
+    footer {
+      background: #172554;
+      color: #dbeafe;
+      padding: 22px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h2>Cloud<span>Deploy</span></h2>
+    <p>Learn • Build • Deploy</p>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to <span>CloudDeploy</span></h1>
+    <p>
+      A simple DevOps project demonstrating automated website
+      deployment using GitHub Actions and AWS EC2.
+    </p>
+    <a class="button" href="#services">Explore Project</a>
+  </section>
+
+  <section class="section" id="services">
+    <h2>Our Technology Stack</h2>
+
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🐙</div>
+        <h3>GitHub</h3>
+        <p>Store and manage website source code.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⚙️</div>
+        <h3>GitHub Actions</h3>
+        <p>Automate the deployment workflow.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">☁️</div>
+        <h3>AWS EC2</h3>
+        <p>Host the website on an Ubuntu server.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🚀</div>
+        <h3>Self-Hosted Runner</h3>
+        <p>Run workflow jobs on our own EC2 instance.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 CloudDeploy | GitHub Actions Practical</p>
+  </footer>
+</body>
+</html>
